@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
 import Navbar from './Navbar';
 
-const styles => ({
+const styles = theme => ({
   navBarDiv: {
     position: 'fixed',
     top: 0,
@@ -21,3 +21,5 @@ class LandingPage extends Component {
     );
   }
 }
+
+export default withStyles(styles)(LandingPage);
