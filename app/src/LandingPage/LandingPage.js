@@ -5,9 +5,10 @@ import About from './About';
 
 const styles = theme => ({
   root: {
+    display: "flex",
     background: "#363636",
-    width: "100vw",
-    height: "100vh"
+    width: "100%",
+    "min-height": "100vh",
   },
 });
 

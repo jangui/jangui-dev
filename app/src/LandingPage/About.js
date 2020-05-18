@@ -2,15 +2,10 @@ import { withStyles } from '@material-ui/styles';
 import React, { Component } from 'react';
 
 const styles = theme => ({
-  jumboContainer: {
-  },
   about: {
     width: '100%',
-    height: "100%",
-    //position: "fixed",
-    padding: "100px 0px",
-   // "box-sizing": "border-box",
     display: "flex",
+    padding: "100px 0px",
     "flex-direction": "column",
     "justify-content": "center",
     "align-items": "center",
