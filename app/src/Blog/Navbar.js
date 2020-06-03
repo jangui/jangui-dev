@@ -25,6 +25,11 @@ const styles = theme => ({
     "padding": "5px 10px",
     "fontSize": "22px"
     },
+  nav__left: {
+    'display': 'flex',
+    'flex-direction': 'row',
+    'justify-content': 'space-between'
+  },
   nav__right: {
     'display': 'flex',
     'flex-direction': 'row',
@@ -38,10 +43,12 @@ class Navbar extends Component {
 
     return (
       <nav className={classes.nav}>
-        <Link className={classes.nav__link} to='/'>Jaime Danguillecourt</Link>
+        <div className={classes.nav__left}>
+          <Link className={classes.nav__link} to='/'>home</Link>
+          <Link className={classes.nav__link} to='/'>blog</Link>
+        </div>
         <div className={classes.nav__right}>
-          <Link className={classes.nav__link} to="/links"> links </Link>
-          <Link className={classes.nav__link} to="/blog"> blog </Link>
+          <Link className={classes.nav__link} to="/"> categories> </Link>
         </div>
       </nav>
     );
