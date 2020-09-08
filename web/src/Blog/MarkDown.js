@@ -51,34 +51,16 @@ const styles = theme => ({
     '& p': {
       'text-indent': '30px',
     },
-    //blockqoute styling
-    '& blockqoute': {
-      'margin-top': '10px',
-      'margin-bottom': '10px',
-      'margin-left': '50px',
-      'padding-left': '15px',
-      'border-left': '3px solid #ffffff',
+    '& blockquote': {
+      'background': '#303245',
+      'border-left': '10px solid #201c2e',
+      'margin': '10px -5px',
+      'padding': '15px 15px',
+      '& p': {
+        'font-weight': 'bold',
+        'font-size': '18px',
+      },
     },
-    /*
-    "& blockqoute": {
-      "background": "#303245",
-      "border-left": "10px solid #ccc",
-      "margin": "1.5em 10px",
-      "padding": "0.5em 10px",
-      "quotes": '\\201C""\\201D""\\2018""\\2019',
-    },
-    "& blockqoute:before": {
-      "color": "#ccc",
-      "content": "open-quote",
-      "font-size": "4em",
-      "line-height": "0.1em",
-      "margin-right": "0.25em",
-      "vertical-align": "-0.4em",
-    },
-    "& blockqoute:before": {
-      "display": "inline",
-    }
-    */
   },
   spacer: {
     'height': '30px',

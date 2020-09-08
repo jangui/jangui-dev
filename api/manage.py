@@ -117,6 +117,8 @@ def main():
         print(f"error {e} env var not set")
         return
 
+    print(env['domain'])
+
     opt = menu()
     process(env, opt)
 

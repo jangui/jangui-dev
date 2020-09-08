@@ -55,7 +55,6 @@ router.route('/search/').post( async (req, res) => {
   const l = parseInt(req.body.limit);
   const order = req.body.order;
   const search = req.body.search;
-  const postType = req.body.postType;
 
   let sortBy;
   if (order === 'new') {
@@ -67,11 +66,12 @@ router.route('/search/').post( async (req, res) => {
   try {
     let posts = await Post.find(
       {
+        // search by title and tags if search specified
         $or:[
           {title: {"$regex": search, "$options": "i"}},
           {tags: {"$regex": search, "$options": "i"}},
         ],
-        type: postType,
+        // filter by tags if specified
       }
     ).sort(
       sortBy
@@ -100,9 +100,8 @@ router.route('/add').post( async (req, res) => {
   const filepath = req.body.filepath;
   const date = Date.parse(req.body.date);
   const tags = req.body.tags;
-  const type = req.body.type;
 
-  const newPost = new Post({title, filepath, type, date, tags});
+  const newPost = new Post({title, filepath, date, tags});
 
   try {
     checkAuth(req.header('Authorization'));

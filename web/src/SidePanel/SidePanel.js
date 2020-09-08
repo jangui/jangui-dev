@@ -31,7 +31,7 @@ const styles = theme => ({
     '& a': {
       'color': 'pink',
       'font-family': '"Sanchez"',
-      'font-size': '32px',
+      'font-size': '24px',
       'text-decoration': 'none',
       'transition': '0.3s',
       '&:hover': {
@@ -45,7 +45,7 @@ const styles = theme => ({
   orderButton: {
     'background-color': 'transparent',
     'font-family': '"Sanchez"',
-    'font-size': '32px',
+    'font-size': '24px',
     'border': 'none',
     'text-decoration': 'none',
     'color': 'pink',
@@ -86,7 +86,7 @@ class SidePanel extends Component {
           </>
     }
     let filterBtn;
-    if (this.props.showOrderBtn === true) {
+    if (this.props.showFilterBtn === true) {
       filterBtn =
           <>
             <li className={classes.divider}> _______ </li>

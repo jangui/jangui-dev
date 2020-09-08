@@ -16,12 +16,6 @@ const postSchema = new Schema({
     trim: true,
     minlength: 1,
   },
-  type: {
-    type: String,
-    required: true,
-    trim: true,
-    minlength: 1,
-  },
   date: { type : Date, required: true },
   tags: [{ type: String }],
 }, {

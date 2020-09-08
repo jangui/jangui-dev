@@ -27,8 +27,6 @@ class Portal extends Component {
       sidePanelOpen: false,
       order: ['new', 'old'],
       orderInd: 0,
-      filter: ['all', 'blog posts', 'poems', 'short stories'],
-      filterInd: 0,
       feedKey: 0,
     };
   }
@@ -47,13 +45,6 @@ class Portal extends Component {
     let newOrderInd = (this.state.orderInd + 1) % this.state.order.length;
     this.setState( (prevState) => {
       return {orderInd: newOrderInd}
-    });
-  };
-
-  filterClickHandler = () => {
-    let newFilterInd = (this.state.filterInd + 1) % this.state.filter.length;
-    this.setState( (prevState) => {
-      return {filterInd: newFilterInd}
     });
   };
 
@@ -77,10 +68,8 @@ class Portal extends Component {
     }
 
     let order = this.state.order[this.state.orderInd];
-    let filter = this.state.filter[this.state.filterInd];
 
     let showOrderBtn = false;
-    let showFilterBtn = false;
     let content;
     if (this.props.content === "err404") {
       content = <Err errMsg="404 Page Not Found" />
@@ -90,11 +79,9 @@ class Portal extends Component {
       content = <BlogPost location={this.props.location}/>
     } else if ( this.props.content === "feed") {
       showOrderBtn = true;
-      showFilterBtn = true;
       content = <BlogFeed
       search={this.props.location.search}
       order={order}
-      filter={filter}
       key={this.state.feedKey}
       />
     }
@@ -107,9 +94,6 @@ class Portal extends Component {
           order={order}
           orderClickHandler={this.orderClickHandler}
           showOrderBtn={showOrderBtn}
-          filter={filter}
-          filterClickHandler={this.filterClickHandler}
-          showFilterBtn={showFilterBtn}
         />
         {backDrop}
         <div className={classes.spacer}></div>

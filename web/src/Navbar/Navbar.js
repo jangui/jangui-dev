@@ -21,10 +21,10 @@ const styles = theme => ({
     },
   nav__link: {
     'textDecorationLine': 'none',
-    'font-family': "'Sanchez'",
+    'font-family': '"Sanchez"',
     'color': '#ffffff',
-    "padding": "5px 10px",
-    "fontSize": "22px",
+    "padding": '5px 10px',
+    "fontSize": '22px',
     'margin-left': '5px',
     },
   nav__left: {
@@ -43,19 +43,19 @@ const styles = theme => ({
     'text-align': 'left',
   },
   search_submit: {
-    'width': "48px",
+    'width': '48px',
     'background': '#303345',
     'color': '#ffffff',
-    'font-family': "'Sanchez'",
-    'caret-color': "transparent",
+    'font-family': '"Sanchez"',
+    'caret-color': 'transparent',
     'border': "2px solid #6F6F6F",
-    'border-radius': "25px",
+    'border-radius': '25px',
     'margin-top': '3px',
-    'padding': "5px 7px",
-    "-webkit-transition": "width 0.4s ease-in-out",
-    "transition": "width 0.4s ease-in-out",
+    'padding': '5px 7px',
+    '-webkit-transition': 'width 0.4s ease-in-out',
+    'transition': 'width 0.4s ease-in-out',
     '&:focus': {
-      "width": "66px",
+      'width': '66px',
     },
   }
 });
