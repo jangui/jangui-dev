@@ -6,6 +6,7 @@ const styles = theme => ({
   main: {
     'background': '#1f2131',
     'margin-top': '-30px',
+    'width': '100%',
   },
   post: {
     'height': '100%',

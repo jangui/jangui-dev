@@ -60,6 +60,22 @@ const styles = theme => ({
     'font-size': '10px',
     'font-family': '"Sanchez"',
   },
+  image: {
+    'height': '16px',
+    'width': '16px',
+    'padding': '20px 5px',
+  },
+  footer_divider: {
+    'flex-grow': '1',
+  },
+  footer: {
+    'display': 'flex',
+    'align-items': 'center',
+    'justify-content': 'space-between',
+    '& p': {
+      'color': 'white',
+    },
+  },
 });
 
 class SidePanel extends Component {
@@ -85,27 +101,27 @@ class SidePanel extends Component {
             </li>
           </>
     }
-    let filterBtn;
-    if (this.props.showFilterBtn === true) {
-      filterBtn =
-          <>
-            <li className={classes.divider}> _______ </li>
-            <li>
-              <button
-                className={classes.orderButton}
-                onClick={this.props.filterClickHandler}>
-              Filter: {this.props.filter}
-              </button>
-            </li>
-          </>
-    }
 
     return (
       <nav className={style}>
         <ul>
           <li><Link to="/about">About</Link></li>
           {orderBtn}
-          {filterBtn}
+          <div className={classes.footer_divider}></div>
+          <div className={classes.footer}>
+            <a href="https://twitter.com/jangui_">
+              <img
+                className={classes.image}
+                src={process.env.PUBLIC_URL + '/twitter_icon.png'}
+              />
+            </a>
+            <a href="https://github.com/jangui">
+              <img
+                className={classes.image}
+                src={process.env.PUBLIC_URL + '/github_icon.png'}
+              />
+            </a>
+          </div>
         </ul>
       </nav>
     );

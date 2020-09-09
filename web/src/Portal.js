@@ -9,12 +9,18 @@ import About from './About';
 const styles = theme => ({
   main: {
     'width': '100%',
+    'height': '100%',
+    'display': 'flex',
+    'flex-direction': 'column',
     'background': '#1f2131',
+    'align-items': 'center',
+    'justify-content': 'top',
     'font-family': '"Sanchez"',
   },
   spacer: {
     'height': '100px',
-    'background': '#1f2131',
+    'width': '100%',
+    'flex-shrink': '0',
   },
 
 });
