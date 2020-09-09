@@ -56,6 +56,54 @@ var = ['asdfa', 'asdfad']
 print(var)
 
 ```
+The following is some code:
+
+```javascript
+class MarkDown extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { markdown: null, err: false };
+  }
+
+  componentDidMount() {
+    try {
+      const filepath = require("." + this.props.filepath + ".md");
+      fetch(filepath).then((response) => response.text()).then((text) => {
+        this.setState({ markdown: text });
+      });
+    } catch {
+      this.setState( {err: true } );
+    }
+  }
+
+  render() {
+    const { classes } = this.props;
+
+    let content = <ReactMarkdown
+      source={this.state.markdown}
+      renderers={{ code: CodeBlock }}
+    />
+
+    // load 404 if post not found
+    if (this.state.err === true) {
+      content = <>
+        <div className={classes.spacer}></div><Err errMsg="404 Page Not Found"/>
+      </>
+
+    }
+
+    return (
+      <div className={classes.markdown}>
+        {content}
+      </div>
+    );
+  }
+}
+
+export default withStyles(styles)(MarkDown);
+
+```
 here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam sem fringilla ut morbi tincidunt augue interdum. Nunc sed augue lacus viverra vitae congue eu consequat ac. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Nisl nunc mi ipsum faucibus vitae. Integer feugiat scelerisque varius morbi enim nunc faucibus. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum. Platea dictumst vestibulum rhoncus est pellentesque elit. Arcu risus quis varius quam quisque id diam. Vitae semper quis lectus nulla at volutpat. Placerat orci nulla pellentesque dignissim enim sit. Nulla facilisi cras fermentum odio eu feugiat pretium. At elementum eu facilisis sed odio morbi quis commodo. Ut enim blandit volutpat maecenas volutpat. Eget nullam non nisi est sit amet facilisis. Adipiscing commodo elit at imperdiet.

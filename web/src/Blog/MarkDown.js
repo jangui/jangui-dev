@@ -1,6 +1,7 @@
 import { withStyles } from '@material-ui/core';
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
+import CodeBlock from './CodeBlock';
 import Err from '../Err';
 
 const styles = theme => ({
@@ -10,7 +11,7 @@ const styles = theme => ({
     'min-wdith': '360px',
     'max-width': '960px',
     'text-align': 'justify',
-    //link styling
+    // link styling
     '& a': {
       'color': 'pink',
       'text-decoration': 'none',
@@ -20,7 +21,7 @@ const styles = theme => ({
       'color': 'purple',
       'cursor': 'pointer',
     },
-    //table styling
+    // table styling
     '& table': {
       'border-collapse': 'collapse',
       'display': 'block',
@@ -42,15 +43,16 @@ const styles = theme => ({
     '& tr:hover': {
       'background-color': '#303245',
     },
-    //code styling
+    // code styling
     '& pre': {
       'padding': '20px',
       'overflow-x': 'auto',
     },
-    //paragraph styling
+    // paragraph styling
     '& p': {
       'text-indent': '30px',
     },
+    // blockquote styling
     '& blockquote': {
       'background': '#303245',
       'border-left': '10px solid #201c2e',
@@ -60,6 +62,10 @@ const styles = theme => ({
         'font-weight': 'bold',
         'font-size': '18px',
       },
+    },
+    // code block styling
+    '& pre': {
+      'background': 'none',
     },
   },
   spacer: {
@@ -88,8 +94,12 @@ class MarkDown extends Component {
   render() {
     const { classes } = this.props;
 
+    let content = <ReactMarkdown
+      source={this.state.markdown}
+      renderers={{ code: CodeBlock }}
+    />
+
     // load 404 if post not found
-    let content = <ReactMarkdown source={this.state.markdown} />
     if (this.state.err === true) {
       content = <>
         <div className={classes.spacer}></div><Err errMsg="404 Page Not Found"/>
