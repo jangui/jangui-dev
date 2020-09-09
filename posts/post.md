@@ -3,6 +3,8 @@
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
+To install simply run `pacman -S npm` and thats it!
+
  is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
 ### Well here we go this is markdown! Enjoy the following list:
@@ -25,14 +27,16 @@ Venenatis cras sed felis eget velit aliquet sagittis id. Quam adipiscing vitae p
 
 Eget nunc lobortis mattis aliquam. Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. In fermentum et sollicitudin ac orci phasellus egestas tellus. Faucibus interdum posuere lorem ipsum dolor sit. Pretium lectus quam id leo in vitae turpis massa sed. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Quis hendrerit dolor magna eget est lorem ipsum. Sagittis id consectetur purus ut faucibus pulvinar. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Etiam tempor orci eu lobortis elementum nibh tellus. Elit at imperdiet dui accumsan sit.
 - item one
+  - sub item
     - subitem one
     - subitem two
+  - sub iteam
 - item two
   - subitem one
 - item 3
 - item 4
 
-here is a link to myself! [wondrouswhy](https://wondrouswhy.com)
+here is a link to myself! [jangui.dev](https://jangui.dev/)
 
 
 Arcu bibendum at varius vel pharetra vel turpis nunc eget. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Dolor purus non enim praesent elementum facilisis leo vel. Posuere lorem ipsum dolor sit amet consectetur. Ultricies lacus sed turpis tincidunt id aliquet. At risus viverra adipiscing at in tellus integer feugiat. In cursus turpis massa tincidunt dui ut. Viverra ipsum nunc aliquet bibendum enim facilisis. Quam adipiscing vitae proin sagittis nisl. In arcu cursus euismod quis viverra nibh cras pulvinar. Senectus et netus et malesuada fames ac turpis.

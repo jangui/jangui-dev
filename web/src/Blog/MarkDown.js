@@ -43,11 +43,6 @@ const styles = theme => ({
     '& tr:hover': {
       'background-color': '#303245',
     },
-    // code styling
-    '& pre': {
-      'padding': '20px',
-      'overflow-x': 'auto',
-    },
     // paragraph styling
     '& p': {
       'text-indent': '30px',
@@ -63,9 +58,17 @@ const styles = theme => ({
         'font-size': '18px',
       },
     },
-    // code block styling
-    '& pre': {
-      'background': 'none',
+    // list styling
+    '& ul': {
+      'list-style-type': 'circle',
+    },
+    '& ul, ol': {
+      'padding': '0px 15px',
+    },
+    // inline code styling
+    '& code': {
+      'background': '#303245',
+      'font-size': '15px',
     },
   },
   spacer: {

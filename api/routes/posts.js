@@ -140,6 +140,7 @@ router.route('/update/:id').post( async (req, res) => {
     let postDoc = await Post.findById(req.params.id);
     postDoc.title = req.body.title;
     postDoc.filepath = req.body.filepath;
+    postDoc.tags = req.body.tags;
 
     try {
       let response = await postDoc.save();
