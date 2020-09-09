@@ -7,20 +7,21 @@ const styles = theme => ({
   main: {
     'width': '100%',
     'height': '100%',
-    background: "#1f2131",
-    "text-align": "center",
+    'background': '#1f2131',
+    'text-align': 'center',
     },
   spacer: {
-    height: "90px",
-    background: "#1f2131",
+    'height': '90px',
+    'background': '#1f2131',
   },
-  "err": {
-    "color": "pink",
-    "font-size": "36px",
-    "text-decoration": "none",
-    "&:hover": {
-      "color": "purple",
-      "cursor": "pointer",
+  err: {
+    'color': 'pink',
+    'font-size': '36px',
+    'text-decoration': 'none',
+    'transition': '0.3s',
+    '&:hover': {
+      'color': 'purple',
+      'cursor': 'pointer',
     },
   },
 });
