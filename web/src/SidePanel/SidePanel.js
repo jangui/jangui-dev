@@ -113,12 +113,14 @@ class SidePanel extends Component {
               <img
                 className={classes.image}
                 src={process.env.PUBLIC_URL + '/twitter_icon.png'}
+                alt="twitter"
               />
             </a>
-            <a href="https://github.com/jangui">
+            <a href="https://github.com/jangui" alt="github">
               <img
                 className={classes.image}
                 src={process.env.PUBLIC_URL + '/github_icon.png'}
+                alt="github"
               />
             </a>
           </div>

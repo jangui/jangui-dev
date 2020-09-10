@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   main: {
@@ -27,17 +26,12 @@ const styles = theme => ({
   about_text: {
     'font-size': '22px',
   },
-  mini: {
-    'font-size': '10px',
-  },
-  spacer: {
-    'height': '10px',
-  },
   footer_spacer: {
     'flex-grow': '1',
   },
   footer: {
     'width': '50%',
+    'padding-bottom': '10px',
   },
   footer_flexbox: {
     'display': 'flex',
@@ -48,6 +42,16 @@ const styles = theme => ({
     'height': '32px',
     'width': '32px',
     'padding': '0px 5px',
+    'padding-top': '10px',
+  },
+  email_link: {
+    'color': 'pink',
+    'text-decoration': 'none',
+    'transition': '0.3s',
+    'padding-bottom': '10px',
+    '&:hover': {
+      'color': 'purple'
+    },
   },
 });
 
@@ -64,33 +68,28 @@ class About extends Component {
             <p> I am an engineer in computer science with a passion for machine learning, full stack web dev, game dev and distributed computing.</p>
             <p>I hope you find my blog posts interesting! </p>
           </div>
-          <div className={classes.spacer}>________</div>
-          <div className={classes.spacer}></div>
-          <div className={classes.spacer}></div>
-          <div className={classes.spacer}></div>
-          <div className={classes.mini}>
-            <p> This website is fully dockerized. The frontend is written w/ React, api w/ Express and the database is mongodb. Traefik is used as a reverse proxy and edge router.</p>
-          </div>
         </div>
         <div className={classes.footer_spacer}></div>
         <div className={classes.footer}>
-          <p> j@danguillecourt.com </p>
+          <a href="mailto: j@danguillecourt.com" className={classes.email_link}>
+            j@danguillecourt.com
+          </a>
           <div className={classes.footer_flexbox}>
             <a href="https://twitter.com/jangui_">
               <img
                 className={classes.image}
                 src={process.env.PUBLIC_URL + '/twitter_icon.png'}
+                alt="twitter"
               />
             </a>
             <a href="https://github.com/jangui">
               <img
                 className={classes.image}
                 src={process.env.PUBLIC_URL + '/github_icon.png'}
+                alt="github"
               />
             </a>
           </div>
-          <div className={classes.spacer}></div>
-          <div className={classes.spacer}></div>
         </div>
       </div>
     );
