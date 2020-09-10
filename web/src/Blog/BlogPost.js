@@ -60,13 +60,31 @@ const styles = theme => ({
 });
 
 class BlogPost extends Component {
+  state = {
+    hasLoaded: false,
+  };
+
+  loadedTrigger = () => {
+    this.setState({hasLoaded: true});
+  }
+
   render() {
     const { classes } = this.props;
+
+    // render post footer only after markdown has rendered
+    let postFooter;
+    if (this.state.hasLoaded) {
+      postFooter = <PostFooter />
+    }
+
     return (
       <div className={classes.main}>
         <div className={classes.post}>
-          <MarkDown filepath={this.props.location.pathname}/>
-          <PostFooter />
+          <MarkDown
+            filepath={this.props.location.pathname}
+            loadedTrigger={this.loadedTrigger}
+          />
+          {postFooter}
         </div>
       </div>
     );

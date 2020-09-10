@@ -89,6 +89,8 @@ class MarkDown extends Component {
       fetch(filepath).then((response) => response.text()).then((text) => {
         this.setState({ markdown: text });
       });
+      // signal to other components markdown has loaded
+      setTimeout( () => {this.props.loadedTrigger()}, 1000);
     } catch {
       this.setState( {err: true } );
     }
