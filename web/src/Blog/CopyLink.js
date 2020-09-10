@@ -1,7 +1,6 @@
 import { withStyles } from '@material-ui/core';
 import React, { Component } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import ReactTooltip from 'react-tooltip';
 import Tooltip from "@material-ui/core/Tooltip";
 
 const styles = theme => ({
@@ -40,22 +39,25 @@ class CopyLink extends Component {
     return (
       <CopyToClipboard text={this.props.text}
           onCopy={() => this.setState({copied: true})}>
-            <Tooltip
-              title={this.state.text}
-              placement="top"
-            >
-              <button
-                className={classes.button}
-                onClick={this.clickHandler}
-                onMouseOver={this.hoverHandler}
+            <span>
+              <Tooltip
+                title={this.state.text}
+                placement="top"
+                enterTouchDelay="10"
               >
-                <img
-                  className={classes.image_small}
-                  src={process.env.PUBLIC_URL + '/link.png'}
-                  alt="link"
-                />
-              </button>
-            </Tooltip>
+                <button
+                  className={classes.button}
+                  onClick={this.clickHandler}
+                  onMouseOver={this.hoverHandler}
+                >
+                  <img
+                    className={classes.image_small}
+                    src={process.env.PUBLIC_URL + '/link.png'}
+                    alt="link"
+                  />
+                </button>
+              </Tooltip>
+            </span>
       </CopyToClipboard>
     );
   }
